@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Podkova|Spectral|Cousine');
 
-@viewport {
-  width: device-width;
-}
-
 html, body {
   font-size: 20px;
 }
@@ -32,7 +28,8 @@ pre, code {
 
 pre {
   white-space: pre-wrap;
-  background: #fff2d2;
+  background: #272727;
+  color: #efefef;
   padding: 1em;
 }
 
