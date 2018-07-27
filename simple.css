@@ -23,16 +23,13 @@ a, p {
 }
 
 pre, code {
-  font-family: 'Cousine', monospace;
+  font-size: 1em;
+  font-family: 'Cousine', monospace, monospace;
 }
 
 pre {
   background: #fff2d2;
   padding: 1em;
-}
-
-pre code {
-  font-size: inherit;
 }
 
 @media (min-width:1025px) {
