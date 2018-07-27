@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Podkova|Spectral');
+@import url('https://fonts.googleapis.com/css?family=Podkova|Spectral|Cousine');
 
 html, body {
   font-size: 20px;
@@ -22,8 +22,12 @@ a, p {
   font-family: 'Podkova', serif;
 }
 
+pre, code {
+  font-family: 'Cousine', monospace;
+  font-size: 0.95rem;
+}
+
 pre {
   background: #ffdf8f;
   padding: 1em;
-  font-size: 90%;
 }
