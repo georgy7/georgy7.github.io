@@ -34,7 +34,6 @@ pre {
 
 @media screen and (max-width: 800px) {
   pre {
-    background: red;
     font-size: 0.75rem !important;
   }
 }
