@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Podkova|Spectral');
+
+html, body {
+  font-size: 20px;
+}
+
+html {
+  background: white;
+}
+body {
+  background: #f9fbf5;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 2em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Spectral', serif;
+}
+
+p {
+  font-family: 'Podkova', serif;
+}
+
+pre {
+  background: #ffdf8f;
+  padding: 1em;
+}
