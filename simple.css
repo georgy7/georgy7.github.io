@@ -23,7 +23,7 @@ a, p {
 }
 
 pre, code {
-  font-size: 1em;
+  font-size: 0.95rem !important;
   font-family: 'Cousine', monospace, sans-serif;
 }
 
@@ -32,8 +32,10 @@ pre {
   padding: 1em;
 }
 
+/*
 @media (min-width:1025px) {
   pre {
-    font-size: 0.95rem;
+    font-size: 0.95rem !important;
   }
 }
+*/
