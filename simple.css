@@ -27,11 +27,16 @@ pre, code {
 }
 
 pre {
-  font-size: 0.95rem;
   background: #fff2d2;
   padding: 1em;
 }
 
 pre code {
   font-size: inherit;
+}
+
+@media (min-width:1025px) {
+  pre {
+    font-size: 0.95rem;
+  }
 }
