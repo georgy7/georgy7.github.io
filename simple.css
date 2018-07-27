@@ -5,10 +5,10 @@ html, body {
 }
 
 html {
-  background: white;
+  background: #f9fbf5;
 }
 body {
-  background: #f9fbf5;
+  background: white;
   margin: 0 auto;
   max-width: 60rem;
   padding: 2em;
@@ -18,11 +18,12 @@ h1, h2, h3, h4 {
   font-family: 'Spectral', serif;
 }
 
-p {
+a, p {
   font-family: 'Podkova', serif;
 }
 
 pre {
   background: #ffdf8f;
   padding: 1em;
+  font-size: 90%;
 }

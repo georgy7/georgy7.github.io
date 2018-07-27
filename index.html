@@ -4,21 +4,25 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <title>Заметки</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="simple.css" type="text/css" />
 </head>
 <body>
-<h1 id="заметки">Заметки</h1>
-<h2 id="как-скрыть-юзернейм-и-хост-в-баше">Как скрыть юзернейм и хост в баше</h2>
-<p>Так называемы command promt определяется переменной PS1. Чтобы скрыть имя пользователя и хост, но оставить текущее местоположение, можно указать вот такой формат:</p>
+<div id="TOC">
+<ul>
+<li><a href="#как-скрыть-юзернейм-и-хост-в-баше">Как скрыть юзернейм и хост в баше</a></li>
+</ul>
+</div>
+<h1 id="как-скрыть-юзернейм-и-хост-в-баше">Как скрыть юзернейм и хост в баше</h1>
+<p>Так называемы command prompt определяется переменной PS1. Чтобы скрыть имя пользователя и хост, но оставить текущее местоположение, можно указать вот такой формат:</p>
 <pre><code>PS1=&quot;\\w \$ &quot;</code></pre>
 <p>Например, в Ubuntu эта переменная определяется в ~/.bashrc. Там её можно и переопределить ближе к концу файла.</p>
 <p>Пример вывода:</p>
-<pre><code>~ $ 
-~ $ 
+<pre><code>~ $
+~ $
 ~ $ cd Pictures/
-~/Pictures $ 
+~/Pictures $
 ~/Pictures $ cd somefolder
 ~/Pictures/somefolder $ █</code></pre>
 </body>
