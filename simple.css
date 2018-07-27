@@ -24,10 +24,14 @@ a, p {
 
 pre, code {
   font-family: 'Cousine', monospace;
-  font-size: 0.95rem;
 }
 
 pre {
+  font-size: 0.95rem;
   background: #fff2d2;
   padding: 1em;
+}
+
+pre code {
+  font-size: inherit;
 }
