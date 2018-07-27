@@ -27,14 +27,20 @@ pre, code {
 }
 
 pre {
-  font-size: 0.92rem !important;
   white-space: pre-wrap;
   background: #fff2d2;
   padding: 1em;
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   pre {
+    background: red;
     font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  pre {
+    font-size: 0.92rem !important;
   }
 }
