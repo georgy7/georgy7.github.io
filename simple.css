@@ -23,19 +23,12 @@ a, p {
 }
 
 pre, code {
-  font-size: 0.95rem !important;
-  font-family: 'Cousine', monospace, sans-serif;
+  font-family: 'Cousine', monospace;
 }
 
 pre {
+  font-size: 0.95rem !important;
+  white-space: pre-wrap;
   background: #fff2d2;
   padding: 1em;
 }
-
-/*
-@media (min-width:1025px) {
-  pre {
-    font-size: 0.95rem !important;
-  }
-}
-*/
