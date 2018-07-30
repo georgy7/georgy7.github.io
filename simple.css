@@ -22,11 +22,13 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Spectral', serif;
-  color: #333;
+  color: #575757;
 }
 
 h1 {
-  line-height: .9;
+  line-height: .87;
+  font-size: 180%;
+  max-width: 16em;
 }
 
 a, p {
