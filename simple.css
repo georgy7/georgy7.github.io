@@ -17,7 +17,6 @@ body {
 }
 
 #TOC {
-  margin-bottom: 2.1rem;
 }
 
 h1, h2, h3, h4 {
@@ -30,6 +29,7 @@ h1 {
   font-size: 180%;
   max-width: 26rem;
   letter-spacing: -.04rem;
+  margin-top: 2.1rem;
 }
 
 a, p {
