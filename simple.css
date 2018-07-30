@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Podkova|Spectral|Cousine');
 
 html, body {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 html {
@@ -10,8 +10,14 @@ html {
 body {
   background: white;
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 49rem;
   padding: 2em;
+  position: relative;
+  left: -.3rem;
+}
+
+#TOC {
+  margin-bottom: 2.1rem;
 }
 
 h1, h2, h3, h4 {
