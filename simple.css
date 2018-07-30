@@ -16,11 +16,15 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Spectral', serif;
-  color: #282828;
+  color: #333;
 }
 
 a, p {
   font-family: 'Podkova', serif;
+}
+
+p {
+  color: #2a2a2a;
 }
 
 pre, code {
@@ -30,7 +34,7 @@ pre, code {
 pre {
   white-space: pre-wrap;
   background: #272727;
-  color: #efefef;
+  color: #cfcfcf;
   padding: 1em;
 }
 
