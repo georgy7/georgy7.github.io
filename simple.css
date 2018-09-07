@@ -50,6 +50,7 @@ pre {
   background: #272727;
   color: #cfcfcf;
   padding: 1em;
+  overflow: auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -61,5 +62,8 @@ pre {
 @media screen and (min-width: 801px) {
   pre {
     font-size: 0.92rem !important;
+  }
+  body {
+    margin-bottom: 10vh;
   }
 }

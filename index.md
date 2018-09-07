@@ -46,3 +46,18 @@
 и&nbsp;дальше можно всё смотреть без задержек.
 
 Навигация как в&nbsp;mc, выход&nbsp;— кнопка&nbsp;q.
+
+# Добавить подсветку синтаксиса в&nbsp;less в Ubuntu
+
+    sudo apt install source-highlight
+
+Затем в `$HOME/.bashrc` добавить
+
+```
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R -N'
+```
+
+Опция `-N` необязательна. Она добавляет номера строк.
+
+Вот и всё. После перелогинивания команда less будет с подсветкой синтаксиса.
