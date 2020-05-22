@@ -11,22 +11,28 @@ body {
   background: white;
   max-width: 37rem;
   padding: 2em;
-  margin-left: 28rem;
+  margin-left: 23rem;
 }
 
 #TOC {
   position: fixed;
   left: 0;
-  width: 28rem;
+  width: 23rem;
   top: 0;
   height: 100vh;
   background: azure;
   overflow-y: auto;
   overflow-x: hidden;
+  font-size: 85%;
 }
 
 #TOC ul {
   list-style-type: decimal;
+}
+
+#TOC li {
+  margin-bottom: 1em;
+  padding-right: .5em;
 }
 
 h1, h2, h3, h4 {
