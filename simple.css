@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Podkova|Spectral|Cousine');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 html, body {
   font-size: 19px;
@@ -9,18 +9,28 @@ html {
 }
 body {
   background: white;
-  margin: 0 auto;
   max-width: 37rem;
   padding: 2em;
-  position: relative;
-  left: -.3rem;
+  margin-left: 28rem;
 }
 
 #TOC {
+  position: fixed;
+  left: 0;
+  width: 28rem;
+  top: 0;
+  height: 100vh;
+  background: azure;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#TOC ul {
+  list-style-type: decimal;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Spectral', serif;
+  font-family: 'PT Sans', sans-serif;
   color: #575757;
 }
 
