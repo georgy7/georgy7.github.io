@@ -12,9 +12,7 @@ body {
   max-width: 37rem;
 
   margin-top: -1px;
-  padding: 1px 2em 40em;
-
-  margin-left: 23rem;
+  padding: 1px 2em 40em 25rem;
 }
 
 #TOC {
@@ -83,7 +81,7 @@ pre {
     width: 18rem;
   }
   body {
-    margin-left: 18rem;
+    padding-left: 20rem;
   }
 }
 
