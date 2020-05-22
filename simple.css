@@ -79,6 +79,12 @@ pre {
   pre {
     font-size: 0.75rem !important;
   }
+  #TOC {
+    width: 18rem;
+  }
+  body {
+    margin-left: 18rem;
+  }
 }
 
 @media screen and (min-width: 801px) {
