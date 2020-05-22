@@ -10,17 +10,23 @@ html {
 body {
   background: white;
   max-width: 37rem;
-  padding: 2em;
+
+  margin-top: -1px;
+  padding: 1px 2em 40em;
+
   margin-left: 23rem;
 }
 
 #TOC {
   position: fixed;
   left: 0;
-  width: 23rem;
   top: 0;
+  width: 23rem;
   height: 100vh;
-  background: azure;
+
+  background: white;
+  border-right: 1px solid gray;
+
   overflow-y: auto;
   overflow-x: hidden;
   font-size: 85%;
@@ -78,8 +84,5 @@ pre {
 @media screen and (min-width: 801px) {
   pre {
     font-size: 0.92rem !important;
-  }
-  body {
-    margin-bottom: 10vh;
   }
 }
