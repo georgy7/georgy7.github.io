@@ -10,6 +10,8 @@ html {
 }
 body {
   background: white;
+
+  min-width: 18rem;
   max-width: 37rem;
 
   margin-top: -1px;
