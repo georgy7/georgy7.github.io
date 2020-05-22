@@ -15,7 +15,7 @@ body {
   max-width: 37rem;
 
   margin-top: -1px;
-  padding: 1px 2em 40em 25rem;
+  padding: 1px 2em 90vh 25rem;
 }
 
 #TOC {
@@ -52,7 +52,7 @@ h1 {
   font-size: 180%;
   max-width: 26rem;
   letter-spacing: -.04rem;
-  margin-top: 2.1rem;
+  margin-top: 5.1rem;
 }
 
 a, p {

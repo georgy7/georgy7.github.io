@@ -1,24 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Заметки</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="simple.css" type="text/css" />
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="simple.css" />
 </head>
 <body>
-<div id="TOC">
+<nav id="TOC">
 <ul>
-<li><a href="#скрыть-юзернейм-ихостнеймвбаше">Скрыть юзернейм и хостнейм в баше</a></li>
-<li><a href="#подготовиться-кмоменту-когда-свободное-место-надиске-будет-исчерпано">Подготовиться к моменту, когда свободное место на диске будет исчерпано</a></li>
-<li><a href="#добавить-подсветку-синтаксиса-вless-в-ubuntu">Добавить подсветку синтаксиса в less в Ubuntu</a></li>
+<li><a href="#скрыть-юзернейм-и-хостнейм-в-баше">Скрыть юзернейм и хостнейм в баше</a></li>
+<li><a href="#подготовиться-к-моменту-когда-свободное-место-на-диске-будет-исчерпано">Подготовиться к моменту, когда свободное место на диске будет исчерпано</a></li>
+<li><a href="#добавить-подсветку-синтаксиса-в-less-в-ubuntu">Добавить подсветку синтаксиса в less в Ubuntu</a></li>
+<li><a href="#шпаргалка-по-nano">Шпаргалка по nano</a></li>
 <li><a href="#просканировать-диапазон-портов-игнорируя-пинг">Просканировать диапазон портов, игнорируя пинг</a></li>
 </ul>
-</div>
-<h1 id="скрыть-юзернейм-ихостнеймвбаше">Скрыть юзернейм и хостнейм в баше</h1>
+</nav>
+<h1 id="скрыть-юзернейм-и-хостнейм-в-баше">Скрыть юзернейм и хостнейм в баше</h1>
 <p>Так называемый command prompt определяется переменной PS1. Чтобы скрыть имя пользователя и хост, но оставить текущее местоположение, можно указать такой формат:</p>
 <pre><code>PS1=&quot;\\w \$ &quot;</code></pre>
 <p>Например, эта переменная определяется в ~/.bashrc. Там её можно и переопределить ближе к концу файла.</p>
@@ -32,7 +38,7 @@
 <p>Это нужно перед тем как делать скриншоты и скринкасты для документации. Иначе шумно.</p>
 <p>Чтобы без лишних настроек получить чистое окно консоли, можно просто</p>
 <pre><code>PS1=&quot;\\w \$ &quot;;clear</code></pre>
-<h1 id="подготовиться-кмоменту-когда-свободное-место-надиске-будет-исчерпано">Подготовиться к моменту, когда свободное место на диске будет исчерпано</h1>
+<h1 id="подготовиться-к-моменту-когда-свободное-место-на-диске-будет-исчерпано">Подготовиться к моменту, когда свободное место на диске будет исчерпано</h1>
 <pre><code>sudo apt-get install ncdu</code></pre>
 <p>На всех серверах сразу после установки системы.</p>
 <p>Когда это случится, шаг 1:</p>
@@ -40,13 +46,23 @@
 <p>Чтобы понять, какие разделы переполнены.</p>
 <p>Шаг 2: зайти в нужный раздел и запустить ncdu. Эта программа рекурсивно сканирует текущую директорию, и дальше можно всё смотреть без задержек.</p>
 <p>Навигация как в mc, выход — кнопка q.</p>
-<h1 id="добавить-подсветку-синтаксиса-вless-в-ubuntu">Добавить подсветку синтаксиса в less в Ubuntu</h1>
+<h1 id="добавить-подсветку-синтаксиса-в-less-в-ubuntu">Добавить подсветку синтаксиса в less в Ubuntu</h1>
+<p><strong>Внимание!</strong> Это замедлит утилиту less. При открывании больших файлов могут быть существенные задержки.</p>
 <pre><code>sudo apt install source-highlight</code></pre>
 <p>Затем в <code>$HOME/.bashrc</code> добавить</p>
 <pre><code>export LESSOPEN=&quot;| /usr/share/source-highlight/src-hilite-lesspipe.sh %s&quot;
 export LESS=&#39; -R -N&#39;</code></pre>
 <p>Опция <code>-N</code> необязательна. Она добавляет номера строк.</p>
-<p>Вот и всё. После перелогинивания команда less будет с подсветкой синтаксиса.</p>
+<h1 id="шпаргалка-по-nano">Шпаргалка по nano</h1>
+<p>Чтобы видеть номер текущей строки при редактировании:</p>
+<pre><code>nano -c file.txt</code></pre>
+<p>Комбинации клавиш:</p>
+<ul>
+<li>Вырезать строку — CTRL+K.</li>
+<li>Вставить строку — CTRL-U.</li>
+<li>Undo — ALT-U или Esc-U (под M в справке подразумевается <a href="https://en.wikipedia.org/wiki/Meta_key">клавиша meta</a>).</li>
+<li>Redo — ALT-E или Esc+E.</li>
+</ul>
 <h1 id="просканировать-диапазон-портов-игнорируя-пинг">Просканировать диапазон портов, игнорируя пинг</h1>
 <p>В данном случае сканируются порты с 1 до 100.</p>
 <pre><code>nmap -p 1-100 -Pn 192.168.1.1</code></pre>
