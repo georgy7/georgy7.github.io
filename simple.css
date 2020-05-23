@@ -74,6 +74,10 @@ pre {
   overflow: auto;
 }
 
+pre code {
+  white-space: inherit;
+}
+
 @media screen and (max-width: 800px) {
   pre {
     font-size: 0.75rem !important;
