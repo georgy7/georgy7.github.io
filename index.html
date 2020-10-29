@@ -450,6 +450,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_подсветка_синтаксиса_вless">Подсветка синтаксиса в&nbsp;less</a></li>
 <li><a href="#_шпаргалка_по_nano">Шпаргалка по nano</a></li>
 <li><a href="#_сканирование_портов">Сканирование портов</a></li>
+<li><a href="#_бэкапы_для_несекретной_информации">Бэкапы для несекретной информации</a></li>
 </ul>
 </li>
 </ul>
@@ -637,12 +638,91 @@ export LESS=' -R -N'</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_бэкапы_для_несекретной_информации">Бэкапы для несекретной информации</h3>
+<div class="paragraph">
+<p>Должны обладать:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>избыточностью;</p>
+</li>
+<li>
+<p>простым чтением и&nbsp;навигацией;</p>
+</li>
+<li>
+<p>простотой в&nbsp;удалении старых снапшотов.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Предлагаю использовать cron и&nbsp;tar.</p>
+</div>
+<div class="paragraph">
+<p>На десктопе <em>из-под рута</em> настраивается
+<a href="https://serverfault.com/questions/255084/simple-rsync-in-crontab-without-password">безпарольный доступ</a>
+к&nbsp;файл-серверу по&nbsp;SSH.</p>
+</div>
+<div class="paragraph">
+<p>Полагаю, если:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>сервак находится в&nbsp;локальной сети,</p>
+</li>
+<li>
+<p>клиентом является root,</p>
+</li>
+<li>
+<p>приватный ключ защищен от&nbsp;чтения другими пользователями,</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>то приватный ключ можно делать без парольной фразы.</p>
+</div>
+<div class="paragraph">
+<p>Открытый ключ копируется на&nbsp;сервер в <em>файл</em> /home/USER/.ssh/authorized_keys.</p>
+</div>
+<div class="paragraph">
+<p>Права:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>drwx------ (700) user user .ssh
+-rw------- (600) user user .ssh/authorized_keys</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Может потребоваться изменить настройки SSH-сервера (разрешить publickey- или RSA-аутентификацию).
+И&nbsp;нужно сделать reload SSH-сервера.</p>
+</div>
+<div class="paragraph">
+<p>Затем, например, в <code>/usr/local/bin</code> кладём скрипт с правами <code>700 root:root</code> примерно следующего содержания:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#!/bin/sh
+tar -cvpz --one-file-system -C "/путь/к/папке/" папка | ssh логин@сервер "(cat &gt; /бэкапы/`date +\"%Y-%m-%dT%H.%M.%S\"`-названиеПапки.tar.gz)"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>sudo crontab -u root -e</code></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>0 0,6,12,18 * * * /usr/local/bin/myScript.sh</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-29 18:41:26 +0300
+Last updated 2020-10-29 19:04:50 +0300
 </div>
 </div>
 </body>
