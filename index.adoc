@@ -29,10 +29,10 @@
 
     PS1="\\w \$ ";clear
 
-Эту переменную можно также определить в&nbsp;~/.bashrc,
-чтобы всегда был какой-то определенный формат.
+Переменную `PS1` можно определить в `~/.bashrc`,
+чтобы всегда был определенный формат.
 
-Подробнее об этой переменной: https://gahcep.github.io/blog/2012/07/28/unix-bash-shell-prompt/
+https://gahcep.github.io/blog/2012/07/28/unix-bash-shell-prompt/[Подробнее об этой переменной].
 
 === Освободить место
 
@@ -134,7 +134,8 @@ https://serverfault.com/questions/255084/simple-rsync-in-crontab-without-passwor
 Может потребоваться изменить настройки SSH-сервера (разрешить publickey- или RSA-аутентификацию).
 И&nbsp;нужно сделать reload SSH-сервера.
 
-Затем, например, в `/usr/local/bin` кладём скрипт с правами `700 root:root` примерно следующего содержания:
+Затем, например, в `/usr/local/bin` клиента кладём скрипт
+с&nbsp;правами `700 root:root` примерно следующего содержания:
 
     #!/bin/sh
     tar -cvpz --one-file-system -C "/путь/к/папке/" папка | ssh логин@сервер "(cat > /бэкапы/`date +\"%Y-%m-%dT%H.%M.%S\"`-названиеПапки.tar.gz)"
@@ -142,3 +143,6 @@ https://serverfault.com/questions/255084/simple-rsync-in-crontab-without-passwor
 `sudo crontab -u root -e`
 
     0 0,6,12,18 * * * /usr/local/bin/myScript.sh
+
+Проблема, которая тут может возникнуть — закончится место на файл-сервере.
+В моём случае, это несущественно. Буду удалять старые снапшоты вручную время от времени.

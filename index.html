@@ -498,11 +498,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Эту переменную можно также определить в&nbsp;~/.bashrc,
-чтобы всегда был какой-то определенный формат.</p>
+<p>Переменную <code>PS1</code> можно определить в <code>~/.bashrc</code>,
+чтобы всегда был определенный формат.</p>
 </div>
 <div class="paragraph">
-<p>Подробнее об этой переменной: <a href="https://gahcep.github.io/blog/2012/07/28/unix-bash-shell-prompt/" class="bare">https://gahcep.github.io/blog/2012/07/28/unix-bash-shell-prompt/</a></p>
+<p><a href="https://gahcep.github.io/blog/2012/07/28/unix-bash-shell-prompt/">Подробнее об этой переменной</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -700,7 +700,8 @@ export LESS=' -R -N'</code></pre>
 И&nbsp;нужно сделать reload SSH-сервера.</p>
 </div>
 <div class="paragraph">
-<p>Затем, например, в <code>/usr/local/bin</code> кладём скрипт с правами <code>700 root:root</code> примерно следующего содержания:</p>
+<p>Затем, например, в <code>/usr/local/bin</code> клиента кладём скрипт
+с&nbsp;правами <code>700 root:root</code> примерно следующего содержания:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -716,13 +717,17 @@ tar -cvpz --one-file-system -C "/путь/к/папке/" папка | ssh ло�
 <pre>0 0,6,12,18 * * * /usr/local/bin/myScript.sh</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Проблема, которая тут может возникнуть — закончится место на файл-сервере.
+В моём случае, это несущественно. Буду удалять старые снапшоты вручную время от времени.</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-29 19:04:50 +0300
+Last updated 2020-10-29 19:20:15 +0300
 </div>
 </div>
 </body>
