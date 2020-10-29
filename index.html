@@ -542,8 +542,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Команда сканирует текущую директорию.
-Довольно полезна в целом для наведения порядка на хардах.</p>
+<p>Команда сканирует текущую директорию (working directory).</p>
 </div>
 </td>
 </tr>
@@ -552,20 +551,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_подсветка_синтаксиса_вless">Подсветка синтаксиса в&nbsp;less</h3>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>При открывании больших файлов могут появиться существенные задержки.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>В Ubuntu:</p>
 </div>
@@ -582,6 +567,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <pre class="highlight"><code>export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R -N'</code></pre>
 </div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>При открывании больших файлов могут появиться существенные задержки.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Опция <code>-N</code> необязательна. Она добавляет номера строк.</p>
@@ -680,7 +679,7 @@ export LESS=' -R -N'</code></pre>
 <p>то приватный ключ можно делать без парольной фразы.</p>
 </div>
 <div class="paragraph">
-<p>Открытый ключ копируется на&nbsp;сервер в <em>файл</em> /home/USER/.ssh/authorized_keys.</p>
+<p>Открытый ключ копируется на <em>сервер</em> в <em>файл</em> /home/USER/.ssh/authorized_keys.</p>
 </div>
 <div class="paragraph">
 <p>Права:</p>
@@ -723,7 +722,7 @@ tar -cvpz --one-file-system -C "/путь/к/папке/" папка | ssh ло�
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-29 19:32:11 +0300
+Last updated 2020-10-29 21:23:52 +0300
 </div>
 </div>
 </body>
