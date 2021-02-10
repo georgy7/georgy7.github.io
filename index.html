@@ -452,6 +452,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_сканирование_портов">Сканирование портов</a></li>
 <li><a href="#_бэкапы_для_несекретной_информации">Бэкапы для несекретной информации</a></li>
 <li><a href="#_проверить_файл_на_вирусы_самым_дешевым_способом">Проверить файл на вирусы самым дешевым способом</a></li>
+<li><a href="#_удалить_конфиденциальные_сведения_изистории_консоли">Удалить конфиденциальные сведения из&nbsp;истории консоли</a></li>
 </ul>
 </li>
 <li><a href="#_здоровье">Здоровье</a>
@@ -749,6 +750,30 @@ status=$?</code></pre>
 Можно повысить параноидальность проверки включив флагами всякие эвристические проверки.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_удалить_конфиденциальные_сведения_изистории_консоли">Удалить конфиденциальные сведения из&nbsp;истории консоли</h3>
+<div class="paragraph">
+<p>Конечно, можно удалить всю историю из&nbsp;текущего окна консоли (<code>history -c</code>),
+но&nbsp;для многих ситуаций это может быть слишком радикальным шагом,
+ведь есть возможность удалить отдельные строки из истории.</p>
+</div>
+<div class="paragraph">
+<p>Вначале надо узнать идентификаторы последних команд.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>history | tail -n 20</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Затем удалить конкретные команды.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>history -d идентификатор</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -789,7 +814,7 @@ status=$?</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-02-01 09:41:04 +0300
+Last updated 2021-02-10 15:57:07 +0300
 </div>
 </div>
 </body>
