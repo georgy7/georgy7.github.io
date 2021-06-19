@@ -549,7 +549,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Команда сканирует текущую директорию (working directory).</p>
+<p>Команда <code>ncdu</code> сканирует текущую директорию (working directory).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Команда <code>ncdu</code> по-умолчанию не&nbsp;следует симлинкам.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>При использовании <code>ncdu</code> из&nbsp;корня файловой системы,
+бывает полезно исключить примонтированные диски: <code>sudo ncdu --exclude=/media/* --exclude=/mnt/*</code></p>
 </div>
 </td>
 </tr>
@@ -830,7 +859,7 @@ status=$?</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 08:41:48 +0300
+Last updated 2021-06-19 08:56:45 +0300
 </div>
 </div>
 </body>
