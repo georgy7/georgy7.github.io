@@ -189,19 +189,24 @@ clear
 
 == Здоровье
 
-=== Туннельный синдром
+=== Эргономика рабочего места
 
-Чтобы не&nbsp;сломать руку об&nbsp;мышку, рекомендую программу https://ru.wikipedia.org/wiki/Workrave[Workrave].
+Чтобы не https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC_%D0%B7%D0%B0%D0%BF%D1%8F%D1%81%D1%82%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0[сломать руку]
+об&nbsp;мышку, рекомендую программу https://ru.wikipedia.org/wiki/Workrave[Workrave].
 Она заставляет делать перерывы раз в&nbsp;три минуты по&nbsp;30 секунд и&nbsp;длинные перерывы время от&nbsp;времени.
-
 Идея в&nbsp;том, чтобы убирать руки и&nbsp;вообще ничего ими не&nbsp;делать.
 
-Минусы:
+Минус: она может выбивать
+из https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D0%BE%D0%BA_(%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F)[состояния потока].
 
-1. на&nbsp;время просмотра кинчиков и&nbsp;ютуба ее лучше выключать, иначе мешает смотреть;
-2. может выбивать из https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D0%BE%D0%BA_(%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F)[состояния потока].
+Иногда нужно просто проверить эргономику рабочего места.
+Можно не&nbsp;заметить, что поза очень неудобная.
 
-Этот синдром можно спутать с&nbsp;чем-то другим.
-При появлении симптомов лучше обратиться к&nbsp;врачу (скорее всего к&nbsp;неврологу).
+Я&nbsp;в&nbsp;очередной раз поменял всё, и&nbsp;вроде стало лучше. Привыкаю.
+Текущие девайсы:
 
-Кстати, эта штука бывает не&nbsp;только запястная, но и&nbsp;локтевая.
+1. Кронштейны настенные https://www.kromax.ru/produce/plasma/3277/[KROMAX ATLANTIS-15] для мониторов (нет регулировки по&nbsp;высоте, к&nbsp;сожалению);
+2. https://www.ikea.com/ru/ru/p/skarsta-skarsta-stol-transf-belyy-s19324820/[Стол с регулируемой высотой (ручной привод) SKARSTA СКАРСТА 120x70 см.];
+3. https://www.ikea.com/ru/ru/p/loberget-loberget-blyskaer-blisker-rabochiy-stul-belyy-s39331867/[Стул на колёсиках LOBERGET ЛОБЕРГЕТ / BLYSKÄR БЛИСКЭР]
+на&nbsp;винтовой опоре из&nbsp;стали, https://en.wikipedia.org/wiki/Polyamide_6[полиамидной пластмассы] и&nbsp;(или?) полиацеталя;
+4. https://www.dns-shop.ru/product/b63ddecf78be3330/kovrik-dexp-om-gmp/opinion/[Большой коврик DEXP OM-GMP] с&nbsp;нескользящей нижней поверхностью и&nbsp;большой подушкой под запястье.
