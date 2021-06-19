@@ -453,6 +453,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_бэкапы_для_несекретной_информации">Бэкапы для несекретной информации</a></li>
 <li><a href="#_проверить_файл_на_вирусы_самым_дешевым_способом">Проверить файл на вирусы самым дешевым способом</a></li>
 <li><a href="#_удалить_конфиденциальные_сведения_изистории_консоли">Удалить конфиденциальные сведения из&nbsp;истории консоли</a></li>
+<li><a href="#_выйти_изsudo">Выйти из&nbsp;sudo</a></li>
 </ul>
 </li>
 <li><a href="#_здоровье">Здоровье</a>
@@ -811,6 +812,24 @@ status=$?</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_выйти_изsudo">Выйти из&nbsp;sudo</h3>
+<div class="paragraph">
+<p>Sudo позволяет не&nbsp;вводить пароль какое-то время после первого использования.
+Это <a href="https://unix.stackexchange.com/questions/382060/change-default-sudo-password-timeout">настраивается</a>.</p>
+</div>
+<div class="paragraph">
+<p>Можно явно попрощаться, не&nbsp;закрывая окно терминала:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo -k</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>В следующий раз sudo снова спросит пароль.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -859,7 +878,7 @@ status=$?</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 08:56:45 +0300
+Last updated 2021-06-19 09:13:07 +0300
 </div>
 </div>
 </body>
