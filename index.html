@@ -445,6 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_bash">Bash</a>
 <ul class="sectlevel2">
+<li><a href="#_новый_пользователь">Новый пользователь</a></li>
 <li><a href="#_скрыть_юзернейм_ихостнейм">Скрыть юзернейм и&nbsp;хостнейм</a></li>
 <li><a href="#_освободить_место">Освободить место</a></li>
 <li><a href="#_подсветка_синтаксиса_вless">Подсветка синтаксиса в&nbsp;less</a></li>
@@ -468,6 +469,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_bash">Bash</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_новый_пользователь">Новый пользователь</h3>
+<div class="paragraph">
+<p>Для генерации паролей удобно использовать <code>pwgen -s</code>.</p>
+</div>
+<div class="paragraph">
+<p>Создание пользователя <code>qwerty</code> с&nbsp;группой <code>qwerty</code>,
+башем в&nbsp;качестве шелла по-умолчанию
+и&nbsp;с&nbsp;домашней директорией:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>U=qwerty
+G=$U</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>groupadd $G
+useradd --create-home -s /bin/bash -g $G $U
+passwd $U</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>chmod</pre>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_скрыть_юзернейм_ихостнейм">Скрыть юзернейм и&nbsp;хостнейм</h3>
 <div class="paragraph">
@@ -878,7 +908,7 @@ status=$?</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-19 09:13:07 +0300
+Last updated 2021-10-04 16:10:04 +0300
 </div>
 </div>
 </body>
