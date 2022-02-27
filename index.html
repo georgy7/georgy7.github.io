@@ -862,7 +862,11 @@ status=$?</code></pre>
 perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5sum &gt; x.chk
 
 # FreeBSD:
-perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5 -r &gt; x.chk</code></pre>
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5 -r &gt; x.chk
+
+# Удобно сравнивать даже из консоли:
+diff --ignore-space-change x1.chk x2.chk
+colordiff --ignore-space-change x1.chk x2.chk</code></pre>
 </div>
 </div>
 </div>
@@ -985,7 +989,7 @@ perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-28 01:15:10 +0300
+Last updated 2022-02-28 01:21:26 +0300
 </div>
 </div>
 </body>
