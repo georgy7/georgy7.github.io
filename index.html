@@ -866,7 +866,14 @@ perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir 
 
 # Удобно сравнивать даже из консоли:
 diff --ignore-space-change x1.chk x2.chk
-colordiff --ignore-space-change x1.chk x2.chk</code></pre>
+colordiff --ignore-space-change x1.chk x2.chk
+
+# Оба файла работают в Linux.
+md5sum -c x1.chk
+md5sum -c x2.chk
+
+# Во FreeBSD (11.1-RELEASE) проверка MD5
+# списка файлов не поддерживается.</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1016,7 +1023,7 @@ foreach(@f) {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-28 01:47:11 +0300
+Last updated 2022-02-28 02:12:37 +0300
 </div>
 </div>
 </body>

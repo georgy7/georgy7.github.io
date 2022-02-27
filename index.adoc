@@ -234,6 +234,13 @@ perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir 
 # Удобно сравнивать даже из консоли:
 diff --ignore-space-change x1.chk x2.chk
 colordiff --ignore-space-change x1.chk x2.chk
+
+# Оба файла работают в Linux.
+md5sum -c x1.chk
+md5sum -c x2.chk
+
+# Во FreeBSD (11.1-RELEASE) проверка MD5
+# списка файлов не поддерживается.
 ```
 
 Расшифровка однострочника:
