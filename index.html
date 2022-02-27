@@ -453,7 +453,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_сканирование_портов">Сканирование портов</a></li>
 <li><a href="#_бэкапы_для_несекретной_информации">Бэкапы для несекретной информации</a></li>
 <li><a href="#_проверить_файл_на_вирусы_самым_дешевым_способом">Проверить файл на вирусы самым дешевым способом</a></li>
-<li><a href="#_md5_вlinux_иfreebsd">MD5 в&nbsp;Linux и&nbsp;FreeBSD</a></li>
+<li><a href="#_md5_всех_файлов_вдиректории_вlinux_иfreebsd">MD5 всех файлов в&nbsp;директории в&nbsp;Linux и&nbsp;FreeBSD</a></li>
 <li><a href="#_удалить_конфиденциальные_сведения_изистории_консоли">Удалить конфиденциальные сведения из&nbsp;истории консоли</a></li>
 <li><a href="#_выйти_изsudo">Выйти из&nbsp;sudo</a></li>
 </ul>
@@ -824,7 +824,7 @@ status=$?</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_md5_вlinux_иfreebsd">MD5 в&nbsp;Linux и&nbsp;FreeBSD</h3>
+<h3 id="_md5_всех_файлов_вдиректории_вlinux_иfreebsd">MD5 всех файлов в&nbsp;директории в&nbsp;Linux и&nbsp;FreeBSD</h3>
 <div class="paragraph">
 <p>Во FreeBSD результат выводится в&nbsp;другом формате, нежели в Linux.</p>
 </div>
@@ -845,7 +845,7 @@ status=$?</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>где <code>-r</code> означает "reversed", в обратном порядке:
+<p>где <code>-r</code> означает &laquo;reversed&raquo;:
 сначала хэш-сумма, потом имя файла.</p>
 </div>
 <div class="paragraph">
@@ -859,15 +859,42 @@ status=$?</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code># Linux:
-perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5sum &gt; x.chk
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"$_\"\n"; }' | xargs md5sum &gt; x.chk
 
 # FreeBSD:
-perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5 -r &gt; x.chk
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"$_\"\n"; }' | xargs md5 -r &gt; x.chk
 
 # Удобно сравнивать даже из консоли:
 diff --ignore-space-change x1.chk x2.chk
 colordiff --ignore-space-change x1.chk x2.chk</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Расшифровка однострочника:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code># Открыть текущую директорию в handle с названием DIR.
+opendir DIR,".";
+
+# Справа налево:
+# прочитать содержимое директории;
+# убрать '.' и '..';
+# отсортировать,
+# сохранить в массив @f.
+my @f = sort grep {!/^\.\.?$/} readdir(DIR);
+
+# Закрыть директорию DIR.
+closedir DIR;
+
+# Вывести каждое имя файла с новой строки в кавычках.
+foreach(@f) {
+    print "\"$_\"\n";
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Поддиректории игнорируются самими командами <code>md5</code> и <code>md5sum</code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -989,7 +1016,7 @@ colordiff --ignore-space-change x1.chk x2.chk</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-28 01:21:26 +0300
+Last updated 2022-02-28 01:43:15 +0300
 </div>
 </div>
 </body>

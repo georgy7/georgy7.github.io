@@ -198,7 +198,7 @@ clamscan --infected --recursive=yes папка
 времени на&nbsp;файл (по-умолчанию `120000` — две&nbsp;минуты),
 лимит глубины рекурсии директорий и&nbsp;т.д.
 
-=== MD5 в&nbsp;Linux и&nbsp;FreeBSD
+=== MD5 всех файлов в&nbsp;директории в&nbsp;Linux и&nbsp;FreeBSD
 
 Во FreeBSD результат выводится в&nbsp;другом формате, нежели в Linux.
 
@@ -214,7 +214,7 @@ md5sum * > checklist.chk
 md5 -r * > checklist.chk
 ```
 
-где `-r` означает "reversed", в обратном порядке:
+где `-r` означает &laquo;reversed&raquo;:
 сначала хэш-сумма, потом имя файла.
 
 И&nbsp;можно было&nbsp;бы сравнивать эти файлы хотя&nbsp;бы Meld'ом визуально,
@@ -226,15 +226,39 @@ md5 -r * > checklist.chk
 
 ```
 # Linux:
-perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5sum > x.chk
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"$_\"\n"; }' | xargs md5sum > x.chk
 
 # FreeBSD:
-perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5 -r > x.chk
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"$_\"\n"; }' | xargs md5 -r > x.chk
 
 # Удобно сравнивать даже из консоли:
 diff --ignore-space-change x1.chk x2.chk
 colordiff --ignore-space-change x1.chk x2.chk
 ```
+
+Расшифровка однострочника:
+
+```
+# Открыть текущую директорию в handle с названием DIR.
+opendir DIR,".";
+
+# Справа налево:
+# прочитать содержимое директории;
+# убрать '.' и '..';
+# отсортировать,
+# сохранить в массив @f.
+my @f = sort grep {!/^\.\.?$/} readdir(DIR);
+
+# Закрыть директорию DIR.
+closedir DIR;
+
+# Вывести каждое имя файла с новой строки в кавычках.
+foreach(@f) {
+    print "\"$_\"\n";
+}
+```
+
+Поддиректории игнорируются самими командами `md5` и `md5sum`.
 
 === Удалить конфиденциальные сведения из&nbsp;истории консоли
 
