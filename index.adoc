@@ -198,6 +198,40 @@ clamscan --infected --recursive=yes папка
 времени на&nbsp;файл (по-умолчанию `120000` — две&nbsp;минуты),
 лимит глубины рекурсии директорий и&nbsp;т.д.
 
+=== MD5 в&nbsp;Linux и&nbsp;FreeBSD
+
+Во FreeBSD результат выводится в&nbsp;другом формате, нежели в Linux.
+
+Команде
+
+```
+md5sum * > checklist.chk
+```
+
+во FreeBSD приблизительно соответствует команда
+
+```
+md5 -r * > checklist.chk
+```
+
+где `-r` означает "reversed", в обратном порядке:
+сначала хэш-сумма, потом имя файла.
+
+И&nbsp;можно было&nbsp;бы сравнивать эти файлы хотя&nbsp;бы Meld'ом визуально,
+если&nbsp;бы порядок строк не&nbsp;отличался.
+Если я&nbsp;правильно понял, порядок glob зависит от&nbsp;переменной LC_COLLATE,
+но&nbsp;мне не&nbsp;удалось сделать его одинаковым.
+Поэтому я&nbsp;решил прибегнуть к&nbsp;универсальному средству&nbsp;&mdash;
+к&nbsp;Перлу.
+
+```
+# Linux:
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5sum > x.chk
+
+# FreeBSD:
+perl -e 'opendir DIR,"."; my @f = sort grep {!/^\.\.?$/} readdir(DIR); closedir DIR; foreach(@f) { print "\"", $_, "\"\n"; }' | xargs md5 -r > x.chk
+```
+
 === Удалить конфиденциальные сведения из&nbsp;истории консоли
 
 Конечно, можно удалить всю историю из&nbsp;текущего окна консоли (`history -c`),
