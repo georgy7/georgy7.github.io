@@ -196,7 +196,7 @@ clamscan --infected --recursive=yes папка
 `--max-filesize=4000m --max-scansize=4000m` (см. `man clamscan`).
 Есть также опции для увеличения лимита
 времени на&nbsp;файл (`--max-scantime`, по-умолчанию `120000` миллисекунд),
-лимита вложенности директорий и&nbsp;т.д.
+предела уровней вложенности директорий и&nbsp;т.д.
 
 === MD5 всех файлов в&nbsp;директории в&nbsp;Linux и&nbsp;FreeBSD
 
@@ -334,9 +334,11 @@ sudo -k
 Текущие девайсы:
 
 1. Кронштейны настенные https://www.kromax.ru/produce/plasma/3277/[KROMAX ATLANTIS-15] для мониторов (нет регулировки по&nbsp;высоте, к&nbsp;сожалению);
-2. https://www.ikea.com/ru/ru/p/skarsta-skarsta-stol-transf-belyy-s19324820/[Стол с регулируемой высотой (ручной привод) SKARSTA СКАРСТА 120x70 см.];
+2. Стол с регулируемой высотой (ручной привод) SKARSTA СКАРСТА 120x70 см.
+(похоже, он теперь называется https://www.ikea.com/ru/ru/p/trotten-trotten-stol-transf-bezhevyy-antracit-s29429586/[TROTTEN]);
 3. https://www.ikea.com/ru/ru/p/loberget-loberget-blyskaer-blisker-rabochiy-stul-belyy-s39331867/[Стул на колёсиках LOBERGET ЛОБЕРГЕТ / BLYSKÄR БЛИСКЭР]
-на&nbsp;винтовой опоре (по&nbsp;происшествии полугода могу сказать, что не&nbsp;самая удобная спинка, но&nbsp;стул точно удобнее нерегулируемого);
+на&nbsp;винтовой опоре (по&nbsp;происшествии полугода могу сказать, что не&nbsp;самая удобная спинка,
+и&nbsp;на&nbsp;нём накапливается статическое электричество, но&nbsp;стул точно удобнее нерегулируемого);
 4. Любая вертикальная мышь. Я&nbsp;использую какую-то https://www.ozon.ru/product/mysh-provodnaya-870174-chernyy-172082323/?utm_campaign=productpage_link&utm_medium=share_button&utm_source=smm[NoName 870174 для правшей].
 5. Большой тканевый коврик без подушки (я&nbsp;использую с&nbsp;подушкой, но&nbsp;она развёрнута в&nbsp;другую сторону).
 Подушка помогала только первые пару недель. Вертикальная мышь намного лучше.
